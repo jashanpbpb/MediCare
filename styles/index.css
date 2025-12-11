@@ -1,6 +1,7 @@
 :root {
     --easein-pause-easeout: cubic-bezier(.57, .81, .39, .17);
     --primary-color: #09543D;
+    --primary-logo-text: #F6C42B;
     --secondary-color: #FFA9E9;
     --primary-text-color: #d7e8e2;
 }
@@ -24,7 +25,7 @@
 
 @keyframes landing-section {
     to {
-        margin: min(1vw, 50px);
+        margin: min(2vw, 50px);
         border-radius: 30px;
         background-color: var(--primary-color);
     }
@@ -36,7 +37,7 @@
     }
 
     to {
-        top: 0;
+        top: 2vw;
     }
 }
 
@@ -56,19 +57,14 @@ main {
     overflow: hidden;
 }
 
-body {
-    position: relative;
-}
-
 header {
     position: fixed;
-    width: 91%;
-    top: 0;
+    width: 85%;
+    left: 2vw;
     display: flex;
     justify-content: space-between;
     animation: landing-header 0.5s ease-in-out 0.3s forwards;
-    z-index: 5;
-    margin: min(1vw, 50px);
+    z-index: 99;
     background-color: var(--primary-color);
     top: 0.6vw;
     height: 65px;
@@ -83,24 +79,26 @@ header button {
     background-color: transparent;
     color: white;
     font-size: 16px;
+    font-weight: 600;
 }
 
 header button:hover {
     color: var(--secondary-color);
-    font-weight: 900;
     transition: 0.2s;
+    scale: 1.05;
 }
 
 
 #first-section {
+
     background-color: var(--primary-color);
     animation: landing-section 0.5s ease-in-out 0.3s 1 forwards;
-    height: 97dvh;
-    position: relative;
+    height: 86dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 90px;
 }
 
 #menu-button {
@@ -120,22 +118,51 @@ header button:hover {
     transition: 0.15s;
 }
 
-#first-section p {
-    position: relative;
-    font-weight: 900;
-    display: block;
-    font-size: 20vw;
+#get-started p {
+    font-size: min(7vw, 500px);
+    font-weight: 1000;
     text-align: center;
     color: var(--primary-text-color);
 }
 
-#first-section p span {
-    font-family: hel;
-    position: absolute;
+@keyframes background-score {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 50px;
+    }
+}
+
+#get-started span {
+    position: relative;
+    anchor-name: --span;
+    width: 50px;
+}
+
+#get-started #confidence-background {
+    position: relative;
+    position-anchor: --span;
     top: 0;
-    right: 250px;
-    top: 160px;
-    color: #540909;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    height: 3.8em;
+    width: 0;
+    animation: background-score 0.6s ease-in 0.8s forwards;
+}
+
+#first-section #tag-line {
+    font-weight: 900;
+    font-size: min(4vw, 50px);
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+#first-section #tag-line span {
+    color: var(--primary-logo-text);
+    display: block;
+    font-size: 1.2em
 }
 
 #inital-overlay {
@@ -156,4 +183,9 @@ header button:hover {
     z-index: inherit;
 }
 
-
+.text {
+    color: var(--primary-text-color);
+    font-size: 1.9vw;
+    text-align: center;
+    width: 90%;
+}
