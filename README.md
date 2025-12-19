@@ -1,4 +1,4 @@
-# **MediCare Webstite Project : Website to `sell` and `buy` pharmaceutical Products
+# <b>MediCare Webstite Project</b> : Website to `sell` and `buy` pharmaceutical Products
 
 
 Features Implemented: 
