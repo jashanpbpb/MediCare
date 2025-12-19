@@ -1,9 +1,8 @@
 :root {
-    --easein-pause-easeout: cubic-bezier(.57, .81, .39, .17);
-    --primary-color: #09543D;
-    --primary-logo-text: #F6C42B;
-    --secondary-color: #FFA9E9;
-    --primary-text-color: #FFFDF7;
+    --primary-color: #09543d;
+    --primary-logo-text: #f6c42b;
+    --secondary-color: #ffa9e9;
+    --primary-text-color: #fffdf7;
 }
 
 @font-face {
@@ -27,7 +26,7 @@
 
 ::selection {
     background-color: var(--secondary-color);
-    color: #461E10;
+    color: #461e10;
 }
 
 @keyframes fade-out {
@@ -60,7 +59,7 @@
 }
 
 body {
-    background-color: #FFFDF7;
+    background-color: #fffdf7;
 }
 
 main {
@@ -98,7 +97,6 @@ header button:hover {
     transform: scale(1.07);
 }
 
-
 #first-section {
     background-color: var(--primary-color);
     animation: landing-section 0.5s ease-in-out 0.3s 1 forwards;
@@ -133,13 +131,13 @@ header button:hover {
     }
 
     to {
-        width: 98%;
+        width: 100%;
     }
 }
 
 @keyframes color-change {
     to {
-        color: #461E10;
+        color: #461e10;
     }
 }
 
@@ -172,7 +170,8 @@ header button:hover {
     height: 90px;
     background-color: var(--secondary-color);
     z-index: -1;
-    animation: background-score 0.7s cubic-bezier(.44, .18, .56, .32) 0.8s forwards;
+    animation: background-score 0.7s cubic-bezier(0.44, 0.18, 0.56, 0.32) 0.8s
+        forwards;
 }
 
 #first-section #tag-line {
@@ -247,7 +246,7 @@ header button:hover {
 }
 
 #buttons a {
-    color: #461E10;
+    color: #461e10;
     font-size: 15px;
     font-weight: bold;
     border-radius: 30px;
@@ -267,13 +266,8 @@ header button:hover {
     transition: transform 270ms;
 }
 
-
-#sell-button:hover~#buttons-background {
+#sell-button:hover ~ #buttons-background {
     transform: translateX(160px);
-}
-
-#second-section * {
-    border: 1px solid purple;
 }
 
 #second-section .text {
@@ -297,13 +291,24 @@ header button:hover {
 
 #second-section {
     color: var(--primary-color);
-    border: 1px solid blue;
-    height: 100dvh;
+    margin-top: 50px;
 }
-
+@keyframes second-section-cards {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
 #second-section #container {
     display: flex;
     height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
 }
 
 #second-section span {
@@ -317,12 +322,63 @@ header button:hover {
     isolation: isolate;
 }
 
-#spirit-background {
-    animation: background-score 0.7s cubic-bezier(.44, .18, .56, .32) 0.8s forwards;
+/* #spirit-background {
+    animation: background-score 0.7s cubic-bezier(0.44, 0.18, 0.56, 0.32) 0.8s
+        forwards;
     position: absolute;
     background-color: rgba(0, 0, 255, 0.48);
     left: 0;
     height: 20px;
+} */
+
+#second-section #container .second-section-card {
+    position: relative;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 250px;
+    border-radius: 30px;
+    gap: 30px;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.02);
+    top: 100px;
+    animation: second-section-cards 1s ease forwards;
+    animation-timeline: view();
+    animation-range: entry cover;
+    opacity: 0;
 }
 
-#second-section #container .cards {}
+#container h3 {
+    font-size: 35px;
+    text-align: left;
+    width: 100%;
+}
+#container p {
+    width: 80px;
+}
+
+#container p {
+    width: 100%;
+}
+
+#container img {
+    height: 100%;
+    margin: 0 20px;
+}
+#container #first {
+    right: 120px;
+    transform: rotate(1deg);
+}
+#container #second img {
+    order: -1;
+}
+#container #second {
+    left: 150px;
+    transform: rotate(-3deg);
+}
+#container #third {
+    transform: rotate(4deg);
+}

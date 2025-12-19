@@ -1,102 +1,94 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MediCare</title>
-        <link rel="stylesheet" href="styles/index.css" />
-        <link
-            rel="fonts"
-            href="styles/fonts/helvetica-neue-5/HelveticaNeueBlack.otf"
-        />
-        <script></script>
-    </head>
 
-    <body>
-        <div id="progress-bar"></div>
-        <header>
-            <button id="buy-button">Buy</button>
-            <img
-                src="/src/medicare 2.png"
-                styles="object-fit: contain;"
-                alt=""
-            />
-            <button id="contact-button" onclick="showContact()">Contact</button>
-        </header>
-        <main>
-            <section id="first-section">
-                <div id="tag-line">
-                    <p><span>The pharmacy </span>without headaches</p>
-                </div>
-                <div id="get-started">
-                    <h1>
-                        GET STARTED WITH
-                        <span
-                            >CONFIDENCE
-                            <div id="confidence-background"></div>
-                        </span>
-                    </h1>
-                    <img
-                        src="src/hands-ok.svg"
-                        class="gestures"
-                        id="hands-ok"
-                        alt=""
-                    />
-                    <img
-                        src="src/hands-fingers-revert.svg"
-                        class="gestures"
-                        id="finger-revert"
-                        alt=""
-                    />
-                </div>
-                <div class="text">
-                    <p>
-                        MediCare does more than help you get The Right pharmacy.
-                        We also provide training, digital, tools and monitoring.
-                    </p>
-                </div>
-                <div id="buttons">
-                    <a href="#" id="buyer-button">I'm a Buyer</a>
-                    <a href="#" id="sell-button">I'm a Seller</a>
-                    <div id="buttons-background"></div>
-                </div>
-            </section>
-            <section id="second-section">
-                <div class="text">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCare</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="fonts" href="styles/fonts/helvetica-neue-5/HelveticaNeueBlack.otf" />
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <header>
+        <button id="buy-button">Buy</button>
+        <img src="/src/medicare 2.png" alt="" />
+        <button id="contact-button" onclick="showContact()">Contact</button>
+    </header>
+    <main>
+        <section id="first-section">
+            <div id="tag-line">
+                <p><span>The pharmacy </span>without headaches</p>
+            </div>
+            <div id="get-started">
+                <h1>
+                    GET STARTED WITH
+                    <span>CONFIDENCE
+                        <div id="confidence-background"></div>
+                    </span>
+                </h1>
+                <img src="src/hands-ok.svg" class="gestures" id="hands-ok" alt="" />
+                <img src="src/hands-fingers-revert.svg" class="gestures" id="finger-revert" alt="" />
+            </div>
+            <div class="text">
+                <p>
+                    MediCare does more than help you get The Right pharmacy.
+                    We also provide training, digital, tools and monitoring.
+                </p>
+            </div>
+            <div id="buttons">
+                <a href="#" id="buyer-button">I'm a Buyer</a>
+                <a href="#" id="sell-button">I'm a Seller</a>
+                <div id="buttons-background"></div>
+            </div>
+        </section>
+        <section id="second-section">
+            <div class="text">
+                <div>
                     <h1>Our Mission</h1>
                     <p>
                         YOUR PHARMACY
-                        <span
-                            >THE QUIET SPIRIT
+                        <span>THE QUIET SPIRIT
                             <div id="spirit-background"></div>
                         </span>
                     </p>
                 </div>
-                <div id="container">
-                    <div class="second-section-card">
+            </div>
+            <div id="container">
+                <div class="second-section-card" id="first">
+                    <div>
                         <h3>A serene purchase</h3>
                         <p>
                             Total transparency, good information to understand
                             everything and training to feel ready to officiate.
                         </p>
                     </div>
-                    <div class="second-section-card">
+                    <img src="/src/hands-heart.svg" alt="">
+                </div>
+                <div class="second-section-card" id="second">
+                    <div>
                         <h3>Lighter steps</h3>
                         <p>
                             With online tools and a redesigned journey for
                             today's entrepreneurs.
                         </p>
                     </div>
-                    <div class="second-section-card">
+                    <img src="/src/hands-fingers-revert.svg" alt="">
+                </div>
+                <div class="second-section-card" id="third">
+                    <div>
                         <h3>A flawless proximity</h3>
                         <p>
                             Advisors who are 100% with you, available, and of
                             course, in line with your project.
                         </p>
                     </div>
+                    <img src="/src/hands-hello.svg" alt="">
                 </div>
-            </section>
-            <section id="third section"></section>
-        </main>
-    </body>
+            </div>
+        </section>
+        <section id="third section"></section>
+    </main>
+</body>
 </html>
