@@ -322,14 +322,6 @@ header button:hover {
     isolation: isolate;
 }
 
-/* #spirit-background {
-    animation: background-score 0.7s cubic-bezier(0.44, 0.18, 0.56, 0.32) 0.8s
-        forwards;
-    position: absolute;
-    background-color: rgba(0, 0, 255, 0.48);
-    left: 0;
-    height: 20px;
-} */
 
 #second-section #container .second-section-card {
     position: relative;
@@ -390,9 +382,9 @@ header button:hover {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     gap: 25px;
     color: var(--primary-color);
-    padding: 0 100px
 }
 
 #third-section-text {
@@ -441,7 +433,6 @@ header button:hover {
     padding-left: 150px;
     background-color: white;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.02);
-    top: 100px;
     position: relative;
 }
 
@@ -449,7 +440,7 @@ header button:hover {
     text-align: left;
     font-size: 25px;
     width: 100%;
-} 
+}
 
 .number {
     position: absolute;
@@ -462,8 +453,100 @@ header button:hover {
     left: 15px;
     top: 15px;
 }
+
 #third-section img {
     position: relative;
     top: -245px;
 }
 
+#fourth-section {
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 50px;
+    text-align: center;
+}
+
+#fourth-section h1 {
+    color: var(--primary-color);
+    text-align: center;
+    width: 100vw;
+    font-size: 18px;
+}
+
+#fourth-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.02);
+    width: 400px;
+    border-radius: 28px;
+    padding: 70px 85px;
+    row-gap: 25px;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+#fourth-section h2 {
+    font-size: 1em;
+}
+
+#fourth-section p {
+    font-size: 2.5em;
+    font-family: Granika;
+    transform: scaleY(1.2);
+    width: 200px;
+}
+
+#fourth-section div img {
+    height: 150px;
+}
+
+@keyframes third-section-buttons {
+    30% {
+        transform: scale(0.94);
+        color: var(--primary-text-color);
+        background-color: #461E10;
+   }
+    
+    100% {
+        transform: scale(1);
+        color: var(--primary-text-color);
+        background-color: #461E10;
+    }
+}
+
+#fourth-section button {
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    font-size: 13px;
+    color: #461E10;
+    font-weight: 700;
+}
+
+#fourth-section button:hover {
+    animation: third-section-buttons 600ms ease-out forwards ;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+margin: 30px 0;
+}
+footer a {
+    text-decoration: none;
+    font-size: 14px;
+    color:#461e10; 
+    font-weight: 650;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
