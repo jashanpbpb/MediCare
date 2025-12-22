@@ -7,13 +7,13 @@
 
 @font-face {
     font-family: "Marvel";
-    src: url(/styles/fonts/MarvelRegular-Dj83.ttf);
+    src: url(styles/fonts/MarvelRegular-Dj83.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Granika";
-    src: url(/fonts/granika-font/Granika-MAm6r.otf);
+    src: url(fonts/granika-font/Granika-MAm6r.otf);
     font-weight: bold;
 }
 
